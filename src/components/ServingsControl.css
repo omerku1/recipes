@@ -1,0 +1,117 @@
+.servings-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--control-bg, #f0f8ff);
+  border: 2px solid var(--control-border, #007bff);
+  border-radius: 12px;
+  gap: 1rem;
+}
+
+.servings-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.servings-count {
+  font-size: 1.5rem;
+  color: var(--primary-color, #007bff);
+  font-weight: bold;
+}
+
+.base-servings {
+  font-size: 0.85rem;
+  color: var(--text-muted, #666);
+  font-weight: normal;
+}
+
+.servings-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.servings-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--btn-bg, #007bff);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.servings-btn:hover:not(:disabled) {
+  background-color: var(--btn-hover, #0056b3);
+  transform: scale(1.05);
+}
+
+.servings-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.servings-btn:disabled {
+  background-color: var(--btn-disabled, #cccccc);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.servings-btn.decrease {
+  background-color: var(--btn-decrease, #dc3545);
+}
+
+.servings-btn.decrease:hover:not(:disabled) {
+  background-color: var(--btn-decrease-hover, #c82333);
+}
+
+.servings-btn.increase {
+  background-color: var(--btn-increase, #28a745);
+}
+
+.servings-btn.increase:hover:not(:disabled) {
+  background-color: var(--btn-increase-hover, #218838);
+}
+
+@media (max-width: 480px) {
+  .servings-control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .servings-label {
+    justify-content: center;
+  }
+
+  .servings-buttons {
+    justify-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .servings-control {
+    --control-bg: #1a3a52;
+    --control-border: #0066cc;
+    --btn-bg: #0066cc;
+    --btn-hover: #0052a3;
+    --btn-disabled: #555555;
+    --btn-decrease: #c92a2a;
+    --btn-decrease-hover: #a61e1e;
+    --btn-increase: #2b8a3e;
+    --btn-increase-hover: #226b31;
+    --text-muted: #aaaaaa;
+    --primary-color: #4da3ff;
+  }
+}
+

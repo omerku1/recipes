@@ -1,0 +1,91 @@
+.ingredient-list {
+  margin: 1.5rem 0;
+}
+
+.ingredient-list h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ingredients {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--ingredient-bg, #f5f5f5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.ingredients li:hover {
+  background-color: var(--ingredient-hover, #e8e8e8);
+}
+
+.ingredients li.checked {
+  opacity: 0.6;
+  background-color: var(--ingredient-checked, #d4f4dd);
+}
+
+.ingredients li.checked .ingredient-text {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.ingredient-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Cooking Mode Styles */
+.ingredient-list.cooking-mode h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ingredient-list.cooking-mode .ingredients li {
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.ingredient-list.cooking-mode .checkbox {
+  width: 32px;
+  height: 32px;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.ingredient-list.cooking-mode .ingredient-text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ingredients li {
+    --ingredient-bg: #2a2a2a;
+    --ingredient-hover: #333333;
+    --ingredient-checked: #1a4d2e;
+  }
+}
+

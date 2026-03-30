@@ -1,0 +1,21 @@
+{
+  "id": "recipe-name-in-english",
+  "name": "Recipe Name",
+  "category": "קטגוריה",
+  "baseServings": 4,
+  "prepTimeMinutes": 30,
+  "tags": ["tag1", "tag2", "tag3"],
+  "ingredients": [
+    { "amount": 1, "unit": "cup", "name": "ingredient name" },
+    { "amount": 2, "unit": "tbsp", "name": "another ingredient" },
+    { "amount": 500, "unit": "g", "name": "something in grams" },
+    { "amount": 3, "unit": "", "name": "items without unit (e.g., eggs)" }
+  ],
+  "stages": [
+    "First step of preparation. Be as detailed as you need.",
+    "Second step. You can include temperatures, times, etc.",
+    "Continue with as many steps as needed.",
+    "Last step - serving suggestions or final touches."
+  ]
+}
+
